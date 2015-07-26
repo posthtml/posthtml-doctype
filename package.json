@@ -1,0 +1,36 @@
+{
+  "name": "posthtml-doctype",
+  "version": "0.0.1",
+  "description": "posthtml doctype plugin",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "jscs": "^1.13.1",
+    "jshint": "^2.8.0",
+    "posthtml": "^0.0.2",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "lint": "jshint . && jscs ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posthtml/posthtml-doctype.git"
+  },
+  "keywords": [
+    "html",
+    "postproccessor",
+    "parser",
+    "transform",
+    "manipulation"
+  ],
+  "author": "Ivan Voischev <voischev.ivan@ya.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/posthtml/posthtml-doctype/issues"
+  },
+  "homepage": "https://github.com/posthtml/posthtml-doctype#readme"
+}
