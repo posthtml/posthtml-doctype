@@ -2,19 +2,12 @@ var doctype = require('..');
 var posthtml = require('posthtml');
 var expect = require('chai').expect;
 
-var HTML = '<div class="button"><div class="button__text">Text</div></div>',
-    INPUTARR = [
-        '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">',
-        HTML
-    ],
-    OUTPUTARR = [
-        '<!DOCTYPE html>',
-        HTML
-    ];
+var HTML = '<html><head><title>Test</title></head><body><div class="button"><div class="button__text">Text</div></div></body></html>',
+    DOCTYPE = '<!DOCTYPE html>';
 
-function test(input, output, done) {
+function test(input, output, doctype, done) {
     posthtml()
-        .use(doctype('<!DOCTYPE html>'))
+        .use(doctype(doctype))
         .process(input)
         .then(function(result) {
             expect(output).to.eql(result.html);
@@ -24,8 +17,22 @@ function test(input, output, done) {
         });
 }
 
-describe('Simple text', function() {
-    it('doctype changed', function(done) {
-        test(INPUTARR.join(''), OUTPUTARR.join(''), done);
+describe('Simple test', function() {
+    it('paste doctype', function(done) {
+        test(
+            HTML,
+            [DOCTYPE, HTML].join(''),
+            DOCTYPE,
+            done
+        );
+    });
+
+    it('null doctype', function(done) {
+        test(
+            HTML,
+            [HTML].join(''),
+            null,
+            done
+        );
     });
 });

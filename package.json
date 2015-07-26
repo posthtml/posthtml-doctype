@@ -1,6 +1,6 @@
 {
   "name": "posthtml-doctype",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "posthtml doctype plugin",
   "main": "index.js",
   "dependencies": {
@@ -22,6 +22,7 @@
   },
   "keywords": [
     "html",
+    "doctype",
     "postproccessor",
     "parser",
     "transform",

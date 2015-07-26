@@ -1,3 +1,5 @@
-module.exports = function(tree) {
-    return tree;
+module.exports = function(doctype) {
+    return function(tree) {
+        return [].concat(doctype, tree);
+    };
 };
