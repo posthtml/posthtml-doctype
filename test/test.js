@@ -1,4 +1,5 @@
-var doctype = require('..');
+/* jshint mocha: true, maxlen: false */
+var dt = require('..');
 var posthtml = require('posthtml');
 var expect = require('chai').expect;
 
@@ -7,7 +8,7 @@ var HTML = '<html><head><title>Test</title></head><body><div class="button"><div
 
 function test(input, output, doctype, done) {
     posthtml()
-        .use(doctype(doctype))
+        .use(dt(doctype))
         .process(input)
         .then(function(result) {
             expect(output).to.eql(result.html);
@@ -35,4 +36,5 @@ describe('Simple test', function() {
             done
         );
     });
+
 });

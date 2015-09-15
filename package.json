@@ -13,8 +13,8 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "test": "mocha",
-    "lint": "jshint . && jscs ."
+    "test": "npm run lint && mocha",
+    "lint": "jshint . && jscs . -v"
   },
   "repository": {
     "type": "git",
