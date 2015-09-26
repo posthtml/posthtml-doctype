@@ -19,11 +19,20 @@ function test(input, output, options, done) {
 }
 
 describe('Simple test', function() {
-    it('paste doctype', function(done) {
+    it('paste doctype U', function(done) {
         test(
             HTML,
             [DOCTYPE, HTML].join(''),
             { doctype: 'HTML 5' },
+            done
+        );
+    });
+
+    it('paste doctype L', function(done) {
+        test(
+            HTML,
+            [DOCTYPE, HTML].join(''),
+            { doctype: 'html 5' },
             done
         );
     });
