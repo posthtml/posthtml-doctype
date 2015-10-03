@@ -1,5 +1,5 @@
 /* jshint maxlen: false */
-module.exports = function(options) {
+module.exports = function posthtmlDoctype(options) {
     options = options || {};
     options.doctype = options.doctype;
 
