@@ -53,7 +53,7 @@ module.exports = function posthtmlDoctype(options) {
         });
 
         if (options.doctype && !hasDoctype) {
-            tree.unshift(setDoctype(options.doctype, tree.options));
+            tree.unshift(setDoctype(options.doctype, tree.options) + '\n');
         }
 
         return tree;

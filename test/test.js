@@ -22,7 +22,7 @@ describe('Simple test', function() {
     it('paste doctype U', function(done) {
         test(
             HTML,
-            [DOCTYPE, HTML].join(''),
+            [DOCTYPE, '\n', HTML].join(''),
             { doctype: 'HTML 5' },
             done
         );
@@ -31,7 +31,7 @@ describe('Simple test', function() {
     it('paste doctype L', function(done) {
         test(
             HTML,
-            [DOCTYPE, HTML].join(''),
+            [DOCTYPE, '\n', HTML].join(''),
             { doctype: 'html 5' },
             done
         );
@@ -51,7 +51,7 @@ describe('Simple test', function() {
         var doc = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">';
         test(
             '<html><head><link></head><body><img></body></html>',
-            [doc, '<html><head><link /></head><body><img /></body></html>'].join(''),
+            [doc, '\n', '<html><head><link /></head><body><img /></body></html>'].join(''),
             { doctype: 'HTML 4.01 Strict' },
             done
         );
