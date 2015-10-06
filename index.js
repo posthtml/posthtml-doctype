@@ -1,5 +1,5 @@
 /* jshint maxlen: false */
-module.exports = function posthtmlDoctype(options) {
+module.exports = function(options) {
     options = options || {};
     options.doctype = options.doctype;
 
@@ -38,7 +38,7 @@ module.exports = function posthtmlDoctype(options) {
             }
     };
 
-    return function(tree) {
+    return function posthtmlDoctype(tree) {
         var hasDoctype = 0;
 
         tree.walk(function(node) {
