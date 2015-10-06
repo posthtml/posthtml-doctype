@@ -1,6 +1,8 @@
 # PostHTML-doctype
 [![npm version](https://badge.fury.io/js/posthtml-doctype.svg)](http://badge.fury.io/js/posthtml-doctype)
 
+[PostHTML](http://github.com/posthtml/posthtml) plugin to simplify working with doctype.
+
 ## Usage
 
 ```js

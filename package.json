@@ -26,7 +26,9 @@
     "postproccessor",
     "parser",
     "transform",
-    "manipulation"
+    "manipulation",
+    "posthtml",
+    "posthtml-plugin"
   ],
   "author": "Ivan Voischev <voischev.ivan@ya.ru>",
   "license": "MIT",
